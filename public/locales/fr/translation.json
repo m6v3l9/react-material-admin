@@ -1,0 +1,452 @@
+{
+  "admin": {
+    "drawer": {
+      "menu": {
+        "calendar": "Calendrier",
+        "dashboard": "Dashboard",
+        "help": "Aide",
+        "home": "Home",
+        "projects": "Projets",
+        "settings": "Paramètres",
+        "userManagement": "Utilisateurs"
+      }
+    },
+    "header": {
+      "notifications": {
+        "empty": {
+          "title": "Votre liste de notifications est vide"
+        },
+        "seeAll": "Voir toutes les notifications"
+      }
+    },
+    "home": {
+      "achievement": {
+        "action": "Voir mon profil",
+        "description": "Vous avez complété {{progress}}% de votre profile. Vos progrès sont fantastiques.",
+        "title": "Félicitations {{name}}"
+      },
+      "followers": {
+        "units": {
+          "likes": "Likes",
+          "love": "Love",
+          "smiles": "Smiles"
+        }
+      },
+      "meeting": {
+        "title": "Réunions"
+      },
+      "targets": {
+        "income": "Revenus",
+        "followers": "Followers",
+        "title": "Objectifs",
+        "views": "Vues"
+      },
+      "views": {
+        "action": "Voir le dashboard",
+        "unit": "Vues"
+      },
+      "welcome": {
+        "message": "Cette page a été conçue pour afficher les informations importantes de l'application",
+        "subTitle": "Heureux de vous revoir!",
+        "title": "Bonjour {{name}},"
+      }
+    }
+  },
+  "auth": {
+    "forgotPassword": {
+      "form": {
+        "action": "Envoyer le code",
+        "back": "Retourner sur la page de login",
+        "email": {
+          "label": "Adresse E-mail"
+        }
+      },
+      "notifications": {
+        "success": "Un e-mail a été envoyé!"
+      },
+      "subTitle": "Pour obtenir un code de validation, entrez d'abord l'adresse e-mail que vous avez ajoutée à votre compte.",
+      "title": "Obtenir un code de validation"
+    },
+    "forgotPasswordSubmit": {
+      "form": {
+        "action": "Réinitialiser le mot de passe",
+        "back": "Retourner sur la page de login",
+        "code": {
+          "label": "Code"
+        },
+        "confirmPassword": {
+          "label": "Confirmer le mot de passe"
+        },
+        "newPassword": {
+          "label": "Nouveau mot de passe"
+        }
+      },
+      "notifications": {
+        "success": "Votre mot de passe a été modifié!"
+      },
+      "subTitle": "Entrez le code reçu via e-mail et choisissez votre nouveau mot de passe.",
+      "title": "Changer le mot de passe"
+    },
+    "login": {
+      "forgotPasswordLink": "Mot de passe oublié?",
+      "form": {
+        "email": {
+          "label": "Adresse E-mail"
+        },
+        "password": {
+          "label": "Mot de passe"
+        }
+      },
+      "newAccountLink": "Vous n'avez pas encore de compte? Enregistrez-vous!",
+      "submit": "Se connecter",
+      "title": "Se connecter"
+    },
+    "register": {
+      "back": "Retourner sur la page de login",
+      "form": {
+        "email": {
+          "label": "Adresse E-mail"
+        },
+        "firstName": {
+          "label": "Prénom"
+        },
+        "gender": {
+          "label": "Genre",
+          "options": {
+            "f": "F",
+            "m": "M",
+            "n": "NC"
+          }
+        },
+        "lastName": {
+          "label": "Nom"
+        }
+      },
+      "notifications": {
+        "success": "Votre compte a été créé avec succès!"
+      },
+      "submit": "S'enregistrer",
+      "title": "S'enregistrer"
+    }
+  },
+  "calendar": {
+    "confirmations": {
+      "delete": "Etes-vous certain de vouloir supprimer cet évènement?"
+    },
+    "form": {
+      "color": {
+        "label": "Couleur"
+      },
+      "description": {
+        "label": "Description"
+      },
+      "end": {
+        "label": "Date de fin"
+      },
+      "start": {
+        "label": "Date de début"
+      },
+      "title": {
+        "label": "Titre"
+      }
+    },
+    "modal": {
+      "add": {
+        "action": "Ajouter",
+        "title": "Ajouter un évènement"
+      },
+      "edit": {
+        "action": "Modifier",
+        "title": "Modifier l'évènement"
+      }
+    },
+    "notifications": {
+      "addSuccess": "{{event}} a été ajouté!",
+      "deleteSuccess": "L'évènement a été supprimé!",
+      "updateSuccess": "{{event}} a été modifié!"
+    },
+    "title": "Calendrier"
+  },
+  "common": {
+    "backHome": "Retourner sur la page d'accueil",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "confirmation": "Confirmation",
+    "delete": "Supprimer",
+    "edit": "Editer",
+    "errors": {
+      "forbidden": {
+        "subTitle": "Vous n'avez pas les accès suffisant pour accéder à cette page"
+      },
+      "notFound": {
+        "subTitle": "Désolé, nous n'avons pas pu trouver la page que vous cherchez. L'URL peut être incorrect.",
+        "title": "Oups!"
+      },
+      "unexpected": {
+        "subTitle": "Une erreur s'est produite! Si le problème persiste, contactez-nous!",
+        "title": "Oups!"
+      },
+      "underConstructions": {
+        "subTitle": "Nous travaillons activement sur cette page",
+        "title": "Chantier en cours!"
+      }
+    },
+    "reset": "Reset",
+    "retry": "Réessayer",
+    "selected": "sélectionné(s)",
+    "snackbar": {
+      "error": "Erreur",
+      "success": "Succès"
+    },
+    "today": "Aujourd'hui",
+    "update": "Modifier",
+    "validations": {
+      "email": "Adresse e-mail invalide",
+      "max": "Maximum {{size}} caractères autorisés",
+      "min": "Minimum {{size}} caractères autorisés",
+      "passwordMatch": "Les mots de passe ne correspondent pas",
+      "required": "Requis"
+    }
+  },
+  "dashboard": {
+    "budget": {
+      "legend": {
+        "actual": "Actuel",
+        "expected": "Attentu"
+      },
+      "title": "Budget"
+    },
+    "expectations": {
+      "legend": {
+        "actual": "Actuel",
+        "expected": "Attentu"
+      },
+      "title": "Attentes"
+    },
+    "expenses": {
+      "legend": {
+        "external": "External",
+        "internal": "Internal"
+      },
+      "title": "Expenses"
+    },
+    "overview": {
+      "orders": "Commandes",
+      "sales": "Ventes",
+      "visits": "Visites"
+    },
+    "salesByAge": {
+      "title": "Ventes par tranche d'âge"
+    },
+    "salesByCategory": {
+      "legend": {
+        "books": "Livres",
+        "movies": "Films et TV",
+        "software": "Software"
+      },
+      "title": "Ventes par catégorie"
+    },
+    "teams": {
+      "columns": {
+        "progress": "Progrès",
+        "team": "Equipe",
+        "value": "Valeur"
+      },
+      "title": "Progrès des équipes"
+    },
+    "title": "Dashboard"
+  },
+  "faq": {
+    "noAnswerLink": "Vous ne trouvez pas la réponse à votre question? Retournez à la page d'aide.",
+    "questions": {
+      "title1": "Qu'est ce que React Admin?",
+      "answer1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget.",
+      "title2": "Comment fonctionne-t-il?",
+      "answer2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget.",
+      "title3": "Quelles sont les fonctionnalités disponibles?",
+      "answer3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget.",
+      "title4": "Qui maintient le projet?",
+      "answer4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget.",
+      "title5": "Quelle est la licence utilisée?",
+      "answer5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget.",
+      "title6": "Comment puis-je contribuer au projet?",
+      "answer6": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortiseget."
+    },
+    "title": "Questions Fréquemment Posées"
+  },
+  "help": {
+    "menu": {
+      "contact": "Contact",
+      "faq": "FAQ",
+      "guide": "Guide",
+      "support": "Support"
+    },
+    "title": "Centre d'aide"
+  },
+  "landing": {
+    "cta": {
+      "main": "Se connecter",
+      "mainAuth": "Continuer en tant que {{name}}",
+      "secondary": "Code source"
+    },
+    "features": {
+      "more": "Plus sur Github",
+      "title": "Principales fonctionnalités"
+    },
+    "title": "Open-source dashboard application fait avec React"
+  },
+  "notifications": {
+    "newComment": "<bold>{{user}}</bold> a écrit un commentaire sur votre profil",
+    "unreadMessages": "Vous avez <bold>{{quantity}}</bold> messages non-lus"
+  },
+  "profile": {
+    "activity": {
+      "empty": "Les logs de votre activité seront affichés ici!",
+      "logs": {
+        "eventAdded": "<bold>Vous</bold> avez ajouté un nouvel évènement: <bold>{{resource}}</bold>",
+        "eventUpdated": "<bold>Vous</bold> avez modifié l'évènement: <bold>{{resource}}</bold>",
+        "userAdded": "<bold>Vous</bold> avez ajouté un nouvel utilisateur: <bold>{{resource}}</bold>",
+        "userDeleted": "<bold>Vous</bold> avez supprimé l'utilisateur: <bold>{{resource}}</bold>",
+        "userUpdated": "<bold>Vous</bold> avez modifié l'utilisateur: <bold>{{resource}}</bold>"
+      }
+    },
+    "completion": {
+      "title": "Avancée du profil"
+    },
+    "info": {
+      "form": {
+        "email": {
+          "label": "Adresse Email"
+        },
+        "firstName": {
+          "label": "Prénom"
+        },
+        "gender": {
+          "label": "Genre",
+          "options": {
+            "f": "Femme",
+            "m": "Homme",
+            "n": "NC"
+          }
+        },
+        "lastName": {
+          "label": "Nom"
+        }
+      },
+      "title": "Modifier le profil"
+    },
+    "menu": {
+      "activity": "Activité",
+      "info": "Information",
+      "password": "Mot de passe"
+    },
+    "notifications": {
+      "informationUpdated": "Information modifiée!",
+      "passwordChanged": "Mot de passe modifié!"
+    },
+    "password": {
+      "form": {
+        "current": {
+          "label": "Mot de passe actuel"
+        },
+        "confirm": {
+          "label": "Confirmer le mot de passe"
+        },
+        "new": {
+          "label": "Nouveau mot de passe"
+        }
+      },
+      "title": "Changer votre mot de passe"
+    }
+  },
+  "settings": {
+    "drawer": {
+      "direction": {
+        "label": "Direction",
+        "options": {
+          "ltr": "LTR",
+          "rtl": "RTL"
+        }
+      },
+      "language": {
+        "label": "Langage",
+        "options": {
+          "en": "English",
+          "fr": "Français"
+        }
+      },
+      "mode": {
+        "label": "Mode",
+        "options": {
+          "dark": "Foncé",
+          "light": "Clair"
+        }
+      },
+      "sidebar": {
+        "label": "Barre latérale",
+        "options": {
+          "collapsed": "Réduite",
+          "full": "Complète"
+        }
+      },
+      "title": "Paramètres"
+    }
+  },
+  "userManagement": {
+    "confirmations": {
+      "delete": "Etes-vous certain de vouloir supprimer cet utilisateur?"
+    },
+    "form": {
+      "disabled": {
+        "label": "Désactivé"
+      },
+      "email": {
+        "label": "Addresse E-mail"
+      },
+      "firstName": {
+        "label": "Prénom"
+      },
+      "gender": {
+        "label": "Genre",
+        "options": {
+          "f": "Femme",
+          "m": "Homme",
+          "n": "NC"
+        }
+      },
+      "lastName": {
+        "label": "Nom"
+      },
+      "role": {
+        "label": "Rôle"
+      }
+    },
+    "modal": {
+      "add": {
+        "action": "Ajouter",
+        "title": "Ajouter un utilisateur"
+      },
+      "edit": {
+        "action": "Modifier",
+        "title": "Modifier l'utilisateur"
+      }
+    },
+    "notifications": {
+      "addSuccess": "{{user}} a été ajouté!",
+      "deleteSuccess": "L(es) utilisateur(s) ont été supprimés!",
+      "updateSuccess": "{{user}} a été modifié!"
+    },
+    "table": {
+      "headers": {
+        "actions": "Actions",
+        "gender": "Genre",
+        "role": "Rôle",
+        "status": "Statut",
+        "user": "Utilisateur"
+      }
+    },
+    "toolbar": {
+      "title": "Utilisateurs"
+    }
+  }
+}

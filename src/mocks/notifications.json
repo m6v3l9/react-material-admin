@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "code": "unreadMessages",
+    "createdAt": 1617868226000,
+    "params": {
+      "quantity": "5"
+    },
+    "unread": true
+  },
+  {
+    "id": "2",
+    "code": "newComment",
+    "createdAt": 1617868226000,
+    "params": {
+      "user": "John Smith"
+    },
+    "unread": false
+  }
+]

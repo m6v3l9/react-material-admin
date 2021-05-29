@@ -1,0 +1,10 @@
+{
+  "id": "1",
+  "avatar": "",
+  "email": "john@smith.com",
+  "firstName": "John",
+  "job": "Founder",
+  "lastName": "Smith",
+  "progress": 75,
+  "role": "Admin"
+}
