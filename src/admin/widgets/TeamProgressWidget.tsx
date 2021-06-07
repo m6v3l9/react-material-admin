@@ -47,12 +47,13 @@ const TeamProgressWidget = () => {
   const { t } = useTranslation();
 
   return (
-    <Card sx={{ mb: 2 }}>
+    <Card>
       <CardHeader title={t("dashboard.teams.title")} />
       <CardContent sx={{ px: 2 }}>
         <TableContainer>
           <Table
             aria-label="team progress table"
+            size="small"
             sx={{
               "& td, & th": {
                 border: 0,

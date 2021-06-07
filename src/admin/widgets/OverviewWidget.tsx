@@ -1,46 +1,18 @@
-import Avatar from "@material-ui/core/Avatar";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
 import Typography from "@material-ui/core/Typography";
-import { useTheme } from "@material-ui/core/styles";
 
 type OverviewWidgetProps = {
   color?: "primary" | "warning" | "error";
   description: string;
-  icon: React.ReactNode;
   title: string;
 };
 
-const OverviewWidget = ({
-  color = "primary",
-  description,
-  icon,
-  title,
-}: OverviewWidgetProps) => {
-  const theme = useTheme();
-  const themeColor = theme.palette[color].main;
-
+const OverviewWidget = ({ description, title }: OverviewWidgetProps) => {
   return (
     <Card>
-      <CardHeader
-        avatar={
-          <Avatar
-            aria-label="avatar"
-            sx={{ bgcolor: themeColor, color: "background.paper" }}
-          >
-            {icon}
-          </Avatar>
-        }
-      />
-      <CardContent>
-        <Typography
-          color={themeColor}
-          gutterBottom
-          component="div"
-          variant="h3"
-          sx={{ fontWeight: theme.typography.fontWeightBold }}
-        >
+      <CardContent sx={{ textAlign: "center" }}>
+        <Typography gutterBottom component="div" variant="h3">
           {title}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">

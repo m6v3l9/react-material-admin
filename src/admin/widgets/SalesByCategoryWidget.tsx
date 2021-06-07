@@ -1,9 +1,9 @@
-import { useTranslation } from "react-i18next";
-import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import { useTheme } from "@material-ui/core/styles";
+import { useTranslation } from "react-i18next";
+import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 
 const SalesByCategoryWidget = () => {
   const { t } = useTranslation();
@@ -31,8 +31,8 @@ const SalesByCategoryWidget = () => {
     <Card>
       <CardHeader title={t("dashboard.salesByCategory.title")} />
       <CardContent>
-        <ResponsiveContainer width="99%" height={260}>
-          <PieChart width={260} height={260}>
+        <ResponsiveContainer width="99%" height={244}>
+          <PieChart width={244} height={244}>
             <Pie
               dataKey="value"
               isAnimationActive={false}

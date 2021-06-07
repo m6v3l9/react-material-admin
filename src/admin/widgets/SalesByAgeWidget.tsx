@@ -1,3 +1,7 @@
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
+import { useTheme } from "@material-ui/core/styles";
 import { useTranslation } from "react-i18next";
 import {
   Legend,
@@ -6,10 +10,6 @@ import {
   RadialBarChart,
   ResponsiveContainer,
 } from "recharts";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
-import { useTheme } from "@material-ui/core/styles";
 
 const SalesByAgeWidget = () => {
   const { t } = useTranslation();
@@ -39,10 +39,10 @@ const SalesByAgeWidget = () => {
   ];
 
   return (
-    <Card sx={{ mb: 2 }}>
+    <Card>
       <CardHeader title={t("dashboard.salesByAge.title")} />
       <CardContent>
-        <ResponsiveContainer width="99%" height={260}>
+        <ResponsiveContainer width="99%" height={244}>
           <RadialBarChart
             barGap={1}
             innerRadius="15%"

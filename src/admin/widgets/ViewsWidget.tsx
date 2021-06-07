@@ -14,27 +14,19 @@ import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
 const data = [
   {
     name: "Jan",
-    ig: 4,
-    fb: 2.4,
-    tw: 2,
+    fb: 2.5,
   },
   {
     name: "Feb",
-    ig: 3,
     fb: 1.4,
-    tw: 2.2,
   },
   {
     name: "Mar",
-    ig: 6,
-    fb: 4.8,
-    tw: 2.3,
+    fb: 6,
   },
   {
     name: "Avr",
-    ig: 6.7,
-    fb: 3.9,
-    tw: 2,
+    fb: 4,
   },
 ];
 
@@ -45,7 +37,7 @@ const ViewsWidget = () => {
   const { t } = useTranslation();
 
   return (
-    <Card sx={{ mb: 2 }}>
+    <Card>
       <CardContent>
         <Typography
           align="center"
@@ -58,7 +50,7 @@ const ViewsWidget = () => {
         <Typography align="center" component="div" variant="h2">
           {views}
         </Typography>
-        <Box sx={{ height: 180 }}>
+        <Box sx={{ height: 224 }}>
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart
               width={500}

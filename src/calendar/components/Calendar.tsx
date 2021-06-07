@@ -41,10 +41,6 @@ const StyledWrapper = styled("div")(
     border-right: none;
   }
 
-  .fc-theme-standard td {
-    border-bottom: none;
-  }
-
   .fc-theme-standard td, .fc-theme-standard th {
     border-color: ${theme.palette.divider};
   }
@@ -170,7 +166,6 @@ const Calendar = ({
           initialView="dayGridMonth"
           locale={i18n.language}
           ref={onCalendarRefSet}
-          weekends={false}
           events={eventSource}
           eventClick={handleEventClick}
           eventTimeFormat={{

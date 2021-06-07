@@ -2,21 +2,19 @@ import * as Sentry from "@sentry/react";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import AuthProvider from "../auth/contexts/AuthProvider";
-import Loader from "../core/components/Loader";
-import QueryWrapper from "../core/components/QueryWrapper";
-import SettingsProvider from "../core/contexts/SettingsProvider";
-import SnackbarProvider from "../core/contexts/SnackbarProvider";
+import AppRoutes from "./AppRoutes";
+import AuthProvider from "./auth/contexts/AuthProvider";
+import Loader from "./core/components/Loader";
+import QueryWrapper from "./core/components/QueryWrapper";
+import SettingsProvider from "./core/contexts/SettingsProvider";
+import SnackbarProvider from "./core/contexts/SnackbarProvider";
+import usePageTracking from "./core/hooks/usePageTracking";
 
 if (process.env.NODE_ENV === "production") {
   Sentry.init({
     dsn: process.env.REACT_APP_SENTRY_DSN,
   });
 }
-
-type AppProviderProps = {
-  children: React.ReactNode;
-};
 
 // Create a client
 const queryClient = new QueryClient({
@@ -29,7 +27,9 @@ const queryClient = new QueryClient({
   },
 });
 
-const AppProvider = ({ children }: AppProviderProps) => {
+function App() {
+  usePageTracking();
+
   return (
     <React.Suspense fallback={<Loader />}>
       <Sentry.ErrorBoundary fallback={"An error has occurred"}>
@@ -37,7 +37,9 @@ const AppProvider = ({ children }: AppProviderProps) => {
           <SettingsProvider>
             <QueryWrapper>
               <SnackbarProvider>
-                <AuthProvider>{children}</AuthProvider>
+                <AuthProvider>
+                  <AppRoutes />
+                </AuthProvider>
               </SnackbarProvider>
             </QueryWrapper>
           </SettingsProvider>
@@ -46,6 +48,6 @@ const AppProvider = ({ children }: AppProviderProps) => {
       </Sentry.ErrorBoundary>
     </React.Suspense>
   );
-};
+}
 
-export default AppProvider;
+export default App;

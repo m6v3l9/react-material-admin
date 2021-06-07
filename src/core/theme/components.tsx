@@ -43,6 +43,7 @@ export const createThemeComponents = (theme: Theme) => ({
       root: {
         "&.MuiAppBar-colorDefault": {
           backgroundColor: theme.palette.background.default,
+          color: theme.palette.text.primary,
         },
       },
     },
@@ -169,6 +170,11 @@ export const createThemeComponents = (theme: Theme) => ({
       },
     },
   },
+  MuiList: {
+    defaultProps: {
+      disablePadding: true,
+    },
+  },
   MuiListItem: {
     styleOverrides: {
       root: {
@@ -176,6 +182,7 @@ export const createThemeComponents = (theme: Theme) => ({
         paddingTop: 12,
         paddingBottom: 12,
         "&.Mui-selected": {
+          backgroundColor: theme.palette.background.default,
           color: theme.palette.text.primary,
         },
       },
@@ -248,7 +255,10 @@ export const createThemeComponents = (theme: Theme) => ({
     styleOverrides: {
       root: {
         borderBottom: `1px solid ${theme.palette.divider}`,
-        padding: 16,
+        padding: "24px 16px",
+      },
+      sizeSmall: {
+        padding: "12px 16px",
       },
     },
   },

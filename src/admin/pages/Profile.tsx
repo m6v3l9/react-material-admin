@@ -6,6 +6,7 @@ import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import Typography from "@material-ui/core/Typography";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import PersonIcon from "@material-ui/icons/Person";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, Outlet } from "react-router-dom";
@@ -14,7 +15,7 @@ import QueryWrapper from "../../core/components/QueryWrapper";
 import { useSnackbar } from "../../core/contexts/SnackbarProvider";
 import AdminAppBar from "../components/AdminAppBar";
 import AdminToolbar from "../components/AdminToolbar";
-import ProfileCompletion from "../widgets/ProfileCompletion";
+import CircleProgressWidget from "../widgets/CircleProgressWidget";
 
 const profileMenuItems = [
   {
@@ -64,25 +65,30 @@ const Profile = () => {
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
+              mb: 6,
             }}
           >
             <Avatar
-              alt="Profile picture"
-              src="img/profile.svg"
               sx={{
-                bgcolor: "transparent",
+                bgcolor: "background.paper",
                 mb: 3,
                 height: 160,
                 width: 160,
               }}
-            />
+            >
+              <PersonIcon sx={{ fontSize: 120 }} />
+            </Avatar>
             <Typography
               component="div"
               variant="h4"
             >{`${userInfo?.firstName} ${userInfo?.lastName}`}</Typography>
             <Typography variant="body2">{userInfo?.role}</Typography>
           </Box>
-          <ProfileCompletion value={75} />
+          <CircleProgressWidget
+            height={244}
+            title={t("profile.completion.title")}
+            value={75}
+          />
         </Grid>
         <Grid item xs={12} md={8} marginTop={3}>
           <Box sx={{ mb: 4 }}>

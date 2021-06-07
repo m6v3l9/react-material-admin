@@ -1,43 +1,43 @@
 import { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import PrivateRoute from "../core/components/PrivateRoute";
+import PrivateRoute from "./core/components/PrivateRoute";
 
 // Admin
-const Admin = lazy(() => import("../admin/pages/Admin"));
-const Dashboard = lazy(() => import("../admin/pages/Dashboard"));
-const Faq = lazy(() => import("../admin/pages/Faq"));
-const HelpCenter = lazy(() => import("../admin/pages/HelpCenter"));
-const Home = lazy(() => import("../admin/pages/Home"));
-const Profile = lazy(() => import("../admin/pages/Profile"));
-const ProfileActivity = lazy(() => import("../admin/pages/ProfileActivity"));
+const Admin = lazy(() => import("./admin/pages/Admin"));
+const Dashboard = lazy(() => import("./admin/pages/Dashboard"));
+const Faq = lazy(() => import("./admin/pages/Faq"));
+const HelpCenter = lazy(() => import("./admin/pages/HelpCenter"));
+const Home = lazy(() => import("./admin/pages/Home"));
+const Profile = lazy(() => import("./admin/pages/Profile"));
+const ProfileActivity = lazy(() => import("./admin/pages/ProfileActivity"));
 const ProfileInformation = lazy(
-  () => import("../admin/pages/ProfileInformation")
+  () => import("./admin/pages/ProfileInformation")
 );
-const ProfilePassword = lazy(() => import("../admin/pages/ProfilePassword"));
+const ProfilePassword = lazy(() => import("./admin/pages/ProfilePassword"));
 
 // Auth
-const ForgotPassword = lazy(() => import("../auth/pages/ForgotPassword"));
+const ForgotPassword = lazy(() => import("./auth/pages/ForgotPassword"));
 const ForgotPasswordSubmit = lazy(
-  () => import("../auth/pages/ForgotPasswordSubmit")
+  () => import("./auth/pages/ForgotPasswordSubmit")
 );
-const Login = lazy(() => import("../auth/pages/Login"));
-const Register = lazy(() => import("../auth/pages/Register"));
+const Login = lazy(() => import("./auth/pages/Login"));
+const Register = lazy(() => import("./auth/pages/Register"));
 
 // Calendar
-const CalendarApp = lazy(() => import("../calendar/pages/CalendarApp"));
+const CalendarApp = lazy(() => import("./calendar/pages/CalendarApp"));
 
 // Core
-const Forbidden = lazy(() => import("../core/pages/Forbidden"));
-const NotFound = lazy(() => import("../core/pages/NotFound"));
+const Forbidden = lazy(() => import("./core/pages/Forbidden"));
+const NotFound = lazy(() => import("./core/pages/NotFound"));
 const UnderConstructions = lazy(
-  () => import("../core/pages/UnderConstructions")
+  () => import("./core/pages/UnderConstructions")
 );
 
 // Landing
-const Landing = lazy(() => import("../landing/pages/Landing"));
+const Landing = lazy(() => import("./landing/pages/Landing"));
 
 // Users
-const UserManagement = lazy(() => import("../users/pages/UserManagement"));
+const UserManagement = lazy(() => import("./users/pages/UserManagement"));
 
 const AppRoutes = () => {
   return (

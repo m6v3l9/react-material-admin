@@ -1,16 +1,16 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
 import Avatar from "@material-ui/core/Avatar";
 import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import Typography from "@material-ui/core/Typography";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
-import Typography from "@material-ui/core/Typography";
+import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 const socials = [
   {
@@ -45,7 +45,7 @@ const FollowersWidget = () => {
   return (
     <React.Fragment>
       {socials.map((social) => (
-        <Card key={social.name} sx={{ mb: 3 }}>
+        <Card key={social.name} sx={{ mb: 2 }}>
           <CardContent sx={{ display: "flex", alignItems: "center" }}>
             <Avatar
               aria-label={`${social.name} avatar`}

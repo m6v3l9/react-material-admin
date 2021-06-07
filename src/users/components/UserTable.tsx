@@ -17,17 +17,14 @@ import Typography from "@material-ui/core/Typography";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import PersonIcon from "@material-ui/icons/Person";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ReactComponent as FemaleSvg } from "../../core/assets/female.svg";
-import { ReactComponent as MaleSvg } from "../../core/assets/male.svg";
 import Empty from "../../core/components/Empty";
-import SvgContainer from "../../core/components/SvgContainer";
 import * as selectUtils from "../../core/utils/selectUtils";
 import { User } from "../types/user";
 
 interface HeadCell {
-  disablePadding: boolean;
   id: string;
   label: string;
   align: "center" | "left" | "right";
@@ -37,25 +34,21 @@ const headCells: HeadCell[] = [
   {
     id: "user",
     align: "left",
-    disablePadding: false,
     label: "userManagement.table.headers.user",
   },
   {
     id: "gender",
     align: "center",
-    disablePadding: false,
     label: "userManagement.table.headers.gender",
   },
   {
     id: "role",
     align: "center",
-    disablePadding: false,
     label: "userManagement.table.headers.role",
   },
   {
     id: "status",
     align: "center",
-    disablePadding: false,
     label: "userManagement.table.headers.status",
   },
 ];
@@ -76,7 +69,7 @@ function EnhancedTableHead({
   return (
     <TableHead>
       <TableRow sx={{ "& th": { border: 0 } }}>
-        <TableCell padding="checkbox">
+        <TableCell sx={{ py: 0 }}>
           <Checkbox
             color="primary"
             indeterminate={numSelected > 0 && numSelected < rowCount}
@@ -88,15 +81,11 @@ function EnhancedTableHead({
           />
         </TableCell>
         {headCells.map((headCell) => (
-          <TableCell
-            key={headCell.id}
-            align={headCell.align}
-            padding={headCell.disablePadding ? "none" : "normal"}
-          >
+          <TableCell key={headCell.id} align={headCell.align} sx={{ py: 0 }}>
             {t(headCell.label)}
           </TableCell>
         ))}
-        <TableCell align="right">
+        <TableCell align="right" sx={{ py: 0 }}>
           {t("userManagement.table.headers.actions")}
         </TableCell>
       </TableRow>
@@ -171,15 +160,15 @@ const UserRow = ({
       <TableCell>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Avatar sx={{ mr: 3 }}>
-            <SvgContainer>
-              {user.gender === "F" ? <FemaleSvg /> : <MaleSvg />}
-            </SvgContainer>
+            <PersonIcon />
           </Avatar>
           <Box>
             <Typography component="div" variant="h6">
               {`${user.lastName} ${user.firstName}`}
             </Typography>
-            <Typography variant="body2">{user.email}</Typography>
+            <Typography color="textSecondary" variant="body2">
+              {user.email}
+            </Typography>
           </Box>
         </Box>
       </TableCell>
@@ -296,11 +285,10 @@ const UserTable = ({
       <TableContainer>
         <Table
           aria-labelledby="tableTitle"
-          size="small"
           sx={{
             minWidth: 600,
             borderCollapse: "separate",
-            borderSpacing: "0 1.5rem",
+            borderSpacing: "0 1rem",
           }}
         >
           <EnhancedTableHead

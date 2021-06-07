@@ -19,7 +19,7 @@ const PersonalTargetsWidget = () => {
   const { t } = useTranslation();
 
   return (
-    <Card sx={{ mb: 5 }}>
+    <Card sx={{ mb: 4 }}>
       <CardHeader title={t("admin.home.targets.title")} />
       <CardContent>
         <List>

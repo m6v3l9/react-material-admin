@@ -2,7 +2,6 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import useTheme from "@material-ui/core/styles/useTheme";
-import { useTranslation } from "react-i18next";
 import {
   PolarAngleAxis,
   RadialBar,
@@ -10,19 +9,24 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-type ProfileCompletionProps = {
+type CircleProgressWidgetProps = {
+  height?: number;
+  title: string;
   value: number;
 };
 
-const ProfileCompletion = ({ value }: ProfileCompletionProps) => {
+const CircleProgressWidget = ({
+  height = 120,
+  title,
+  value,
+}: CircleProgressWidgetProps) => {
   const theme = useTheme();
-  const { t } = useTranslation();
 
   return (
-    <Card sx={{ mt: 6 }}>
-      <CardHeader title={t("profile.completion.title")} />
+    <Card>
+      <CardHeader title={title} />
       <CardContent>
-        <ResponsiveContainer width="99%" height={260}>
+        <ResponsiveContainer width="99%" height={height}>
           <RadialBarChart
             innerRadius="85%"
             outerRadius="85%"
@@ -56,4 +60,4 @@ const ProfileCompletion = ({ value }: ProfileCompletionProps) => {
   );
 };
 
-export default ProfileCompletion;
+export default CircleProgressWidget;

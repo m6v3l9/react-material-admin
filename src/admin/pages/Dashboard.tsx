@@ -1,37 +1,38 @@
 import Grid from "@material-ui/core/Grid";
-import AttachMoney from "@material-ui/icons/AttachMoney";
-import PersonIcon from "@material-ui/icons/Person";
-import ShoppingBasket from "@material-ui/icons/ShoppingBasket";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import AdminAppBar from "../components/AdminAppBar";
 import AdminToolbar from "../components/AdminToolbar";
+import ActivityWidget from "../widgets/ActivityWidget";
 import BudgetWidget from "../widgets/BudgetWidget";
-import ExpectationsWidget from "../widgets/ExpectationsWidget";
-import ExpensesWidget from "../widgets/ExpensesWidget";
+import CircleProgressWidget from "../widgets/CircleProgressWidget";
 import OverviewWidget from "../widgets/OverviewWidget";
+import ProgressWidget from "../widgets/ProgressWidget";
 import SalesByAgeWidget from "../widgets/SalesByAgeWidget";
 import SalesByCategoryWidget from "../widgets/SalesByCategoryWidget";
+import SalesHistoryWidget from "../widgets/SalesHistoryWidget";
 import TeamProgressWidget from "../widgets/TeamProgressWidget";
+import UsersWidget from "../widgets/UsersWidget";
 
 const overviewItems = [
   {
-    color: "primary" as "primary",
-    icon: PersonIcon,
     unit: "dashboard.overview.visits",
-    value: "204 000",
+    value: "20 700",
   },
   {
-    color: "warning" as "warning",
-    icon: AttachMoney,
     unit: "dashboard.overview.sales",
-    value: "515 000",
+    value: "$ 1 550",
   },
   {
-    color: "error" as "error",
-    icon: ShoppingBasket,
     unit: "dashboard.overview.orders",
-    value: "14 000",
+    value: "149",
+  },
+  {
+    unit: "dashboard.overview.users",
+    value: "657",
   },
 ];
 
@@ -45,29 +46,53 @@ const Dashboard = () => {
       </AdminAppBar>
       <Grid container spacing={2}>
         {overviewItems.map((item, index) => (
-          <Grid key={index} item xs={12} md={4}>
-            <OverviewWidget
-              color={item.color}
-              description={t(item.unit)}
-              icon={<item.icon />}
-              title={item.value}
-            />
+          <Grid key={index} item xs={6} md={3}>
+            <OverviewWidget description={t(item.unit)} title={item.value} />
           </Grid>
         ))}
-        <Grid item xs={12} lg={8}>
-          <ExpectationsWidget />
-        </Grid>
-        <Grid item xs={12} lg={4}>
-          <SalesByCategoryWidget />
+        <Grid item xs={12} md={8}>
+          <ActivityWidget />
         </Grid>
         <Grid item xs={12} md={4}>
-          <ExpensesWidget />
+          <BudgetWidget />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <SalesHistoryWidget value={567} />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <ProgressWidget
+            avatar={<SupervisorAccountIcon />}
+            mb={2}
+            title={t("dashboard.visitProgress.title")}
+            value={75}
+          />
+          <ProgressWidget
+            avatar={<ShoppingBasketIcon />}
+            mb={2}
+            title={t("dashboard.orderProgress.title")}
+            value={50}
+          />
+          <ProgressWidget
+            avatar={<AttachMoneyIcon />}
+            title={t("dashboard.salesProgress.title")}
+            value={25}
+          />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <CircleProgressWidget
+            height={204}
+            title={t("dashboard.progress.title")}
+            value={75}
+          />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <UsersWidget />
         </Grid>
         <Grid item xs={12} md={8}>
           <TeamProgressWidget />
         </Grid>
         <Grid item xs={12} md={4}>
-          <BudgetWidget />
+          <SalesByCategoryWidget />
         </Grid>
         <Grid item xs={12} md={8}>
           <SalesByAgeWidget />

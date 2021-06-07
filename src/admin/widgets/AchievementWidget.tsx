@@ -13,9 +13,7 @@ const AchievementWidget = () => {
   const { t } = useTranslation();
 
   return (
-    <Card
-      sx={{ bgcolor: "primary.main", color: "primary.contrastText", mb: 3 }}
-    >
+    <Card sx={{ bgcolor: "primary.main", color: "primary.contrastText" }}>
       <CardContent
         sx={{
           display: "flex",

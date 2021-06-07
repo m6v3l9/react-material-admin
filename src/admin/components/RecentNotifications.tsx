@@ -9,11 +9,11 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import Popover from "@material-ui/core/Popover";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import PersonIcon from "@material-ui/icons/Person";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import { ReactComponent as AvatarSvg } from "../../core/assets/male.svg";
 import Empty from "../../core/components/Empty";
 import Loader from "../../core/components/Loader";
 import Result from "../../core/components/Result";
@@ -89,7 +89,7 @@ const RecentNotifications = () => {
                 >
                   <ListItemAvatar>
                     <Avatar>
-                      <AvatarSvg />
+                      <PersonIcon />
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText

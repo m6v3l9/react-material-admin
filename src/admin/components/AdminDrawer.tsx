@@ -11,6 +11,7 @@ import EventIcon from "@material-ui/icons/Event";
 import HelpCenterIcon from "@material-ui/icons/HelpCenter";
 import HomeIcon from "@material-ui/icons/Home";
 import PeopleIcon from "@material-ui/icons/People";
+import PersonIcon from "@material-ui/icons/Person";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
@@ -81,9 +82,6 @@ const AdminDrawer = ({
             activeClassName="Mui-selected"
             end={true}
             to={`/${process.env.PUBLIC_URL}${item.path}`}
-            sx={{
-              color: "text.secondary",
-            }}
           >
             <ListItemAvatar>
               <Avatar sx={{ color: "inherit", bgcolor: "transparent" }}>
@@ -100,14 +98,16 @@ const AdminDrawer = ({
         ))}
       </List>
       <Box sx={{ flexGrow: 1 }} />
-      <List component="nav" sx={{ px: 2 }}>
+      <List component="nav" sx={{ p: 2 }}>
         <ListItem
           button
           component={NavLink}
           to={`/${process.env.PUBLIC_URL}/admin/profile`}
         >
           <ListItemAvatar>
-            <Avatar src="img/profile.svg" />
+            <Avatar>
+              <PersonIcon />
+            </Avatar>
           </ListItemAvatar>
           {userInfo && (
             <ListItemText
