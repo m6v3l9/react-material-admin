@@ -209,31 +209,26 @@
     }
   },
   "dashboard": {
+    "activity": {
+      "title": "Activité"
+    },
     "budget": {
       "legend": {
-        "actual": "Actuel",
-        "expected": "Attentu"
+        "unit": "Budget ($K)"
       },
       "title": "Budget"
     },
-    "expectations": {
-      "legend": {
-        "actual": "Actuel",
-        "expected": "Attentu"
-      },
-      "title": "Attentes"
-    },
-    "expenses": {
-      "legend": {
-        "external": "External",
-        "internal": "Internal"
-      },
-      "title": "Expenses"
+    "orderProgress": {
+      "title": "Commandes"
     },
     "overview": {
       "orders": "Commandes",
       "sales": "Ventes",
+      "users": "Utilisateurs",
       "visits": "Visites"
+    },
+    "progress": {
+      "title": "Progrès"
     },
     "salesByAge": {
       "title": "Ventes par tranche d'âge"
@@ -246,6 +241,13 @@
       },
       "title": "Ventes par catégorie"
     },
+    "salesHistory": {
+      "title": "Historique des ventes",
+      "unit": "$ aujourd'hui"
+    },
+    "salesProgress": {
+      "title": "Ventes"
+    },
     "teams": {
       "columns": {
         "progress": "Progrès",
@@ -253,6 +255,12 @@
         "value": "Valeur"
       },
       "title": "Progrès des équipes"
+    },
+    "users": {
+      "title": "Utilisateurs récents"
+    },
+    "visitProgress": {
+      "title": "Visites"
     },
     "title": "Dashboard"
   },

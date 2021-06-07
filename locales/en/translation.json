@@ -46,7 +46,7 @@
         "unit": "Views"
       },
       "welcome": {
-        "message": "This page is designed to give some important information about the application",
+        "message": "This page is designed to give some important information about the application. Let's make someting together!",
         "subTitle": "Welcome back!",
         "title": "Hi {{name}},"
       }
@@ -209,31 +209,26 @@
     }
   },
   "dashboard": {
+    "activity": {
+      "title": "Activity"
+    },
     "budget": {
       "legend": {
-        "actual": "Actual",
-        "expected": "Expected"
+        "unit": "Budget ($K)"
       },
       "title": "Budget"
     },
-    "expectations": {
-      "legend": {
-        "actual": "Actual",
-        "expected": "Expected"
-      },
-      "title": "Expectations"
-    },
-    "expenses": {
-      "legend": {
-        "external": "External",
-        "internal": "Internam"
-      },
-      "title": "Expenses"
+    "orderProgress": {
+      "title": "Orders"
     },
     "overview": {
       "orders": "Orders",
       "sales": "Sales",
+      "users": "Users",
       "visits": "Visits"
+    },
+    "progress": {
+      "title": "Progress"
     },
     "salesByAge": {
       "title": "Sales by Age"
@@ -246,6 +241,13 @@
       },
       "title": "Sales by Category"
     },
+    "salesHistory": {
+      "title": "Sales History",
+      "unit": "$ today"
+    },
+    "salesProgress": {
+      "title": "Sales"
+    },
     "teams": {
       "columns": {
         "progress": "Progress",
@@ -253,6 +255,12 @@
         "value": "Value"
       },
       "title": "Teams Progress"
+    },
+    "users": {
+      "title": "Recent Users"
+    },
+    "visitProgress": {
+      "title": "Visits"
     },
     "title": "Dashboard"
   },
