@@ -142,6 +142,21 @@ export const createThemeComponents = (theme: Theme) => ({
     styleOverrides: {
       root: {
         boxShadow: "none",
+        lineHeight: "inherit",
+        textTransform: "none" as any,
+        "&.MuiFab-secondary": {
+          color: theme.palette.text.primary,
+        },
+      },
+    },
+  },
+  MuiFilledInput: {
+    defaultProps: {
+      disableUnderline: true,
+    },
+    styleOverrides: {
+      root: {
+        borderRadius: theme.shape.borderRadius,
       },
     },
   },

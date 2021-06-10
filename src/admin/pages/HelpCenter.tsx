@@ -32,7 +32,7 @@ const HelpCenter = () => {
           <HelpSvg />
         </SvgContainer>
       </Container>
-      <Grid container spacing={3} sx={{ mt: 3 }}>
+      <Grid container spacing={2} sx={{ mt: 3 }}>
         <Grid item xs={6} lg={3}>
           <Card>
             <CardActionArea disabled={true}>

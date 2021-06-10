@@ -1,57 +1,56 @@
-# Getting Started
+<p align="center">
+  <a href="https://m6v3l9.github.io/react-material-admin/" rel="noopener" target="_blank"><img width="120" src="https://m6v3l9.github.io/react-material-admin/logo.svg" alt="React Material Admin logo"></a></p>
+</p>
 
-### `yarn install`
+<h1 align="center">React Material Admin</h1>
+<p align="center">
+<b>react-material-admin</b> is a free and open-source admin  application including many real-world examples. It is based on React and Material-UI.
+</p>
 
-Install dependencies.
+[![react-material-admin-demo](https://cdn.dribbble.com/users/6538082/screenshots/15805144/media/5687464c7190019afb748863ac6957d3.png?compress=1&resize=1200x900)](https://m6v3l9.github.io/react-material-admin/)
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+# Install dependencies
+yarn install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Run the app
+yarn start
+```
 
-### `yarn test`
+This will automatically open [http://localhost:3000](http://localhost:3000).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `yarn run build:<env>`
-
-Builds the app for targeted environment to the `build` folder.
-
-# Features
-
-## Pages
-
+```
+- Admin
+  - Home
+  - Dashboard/Charts
+  - FAQ
+  - Help Center
+  - Profile Activity
+  - Profile Information
+  - Profile Password
 - Auth
   - Forgot Password
   - Forgot Password Submit
   - Login
   - Register
 - Calendar App
-- Dashboard
-  - Home
-  - Charts
-- Errors
+- Core
   - Forbidden
   - Not Found
   - Under Constructions
-- Help
-  - FAQ
-  - Help Center
 - Landing
-- Profile
-  - Activity
-  - Update Information
-  - Change Password
 - User Management
+```
 
-## Technology Stack
+## Technologies
 
 | Package               | Description                                    | Docs                                                                            |
 | --------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------- |
-| Analytics             | Google Analytics                               | [Docs](https://github.com/react-ga/react-ga)                                    |
+| Analytics             | Google Analytics                               | [Docs](https://analytics.google.com/analytics/web/react-ga)                     |
 | Bundle Size Analyzer  | Source map explorer                            | [Docs](https://create-react-app.dev/docs/analyzing-the-bundle-size)             |
 | Charts                | Recharts                                       | [Docs](https://recharts.org/)                                                   |
 | CI                    | Github CI                                      | [Docs]()                                                                        |
@@ -76,3 +75,8 @@ Builds the app for targeted environment to the `build` folder.
 | Drag & Drop  | Add Projects page with Drag & Drop features |                                 |
 | E2E Testing  | Cypress                                     | [Docs](https://www.cypress.io/) |
 | Unit Testing | Jest                                        | [Docs](https://jestjs.io/)      |
+
+## License
+
+This project is licensed under the terms of the
+[MIT license](/LICENSE).

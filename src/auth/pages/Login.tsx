@@ -31,7 +31,7 @@ const Login = () => {
   const formik = useFormik({
     initialValues: {
       email: "demo@example.com",
-      password: "12345678",
+      password: "guWEK<'r/-47-XG3",
     },
     validationSchema: Yup.object({
       email: Yup.string()
@@ -72,6 +72,7 @@ const Login = () => {
           >
             <TextField
               margin="normal"
+              variant="filled"
               required
               fullWidth
               id="email"
@@ -87,6 +88,7 @@ const Login = () => {
             />
             <TextField
               margin="normal"
+              variant="filled"
               required
               fullWidth
               name="password"

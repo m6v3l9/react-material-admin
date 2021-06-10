@@ -301,7 +301,7 @@
       "more": "More on Github",
       "title": "Main Features"
     },
-    "title": "Open-source dashboard application made with React"
+    "title": "Free and open-source admin application made with React and Material-UI"
   },
   "notifications": {
     "newComment": "<bold>{{user}}</bold> has written a new comment on your profile",

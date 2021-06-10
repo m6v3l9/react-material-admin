@@ -1,7 +1,7 @@
-import IconButton from "@material-ui/core/IconButton";
+import Box from "@material-ui/core/Box";
+import Fab from "@material-ui/core/Fab";
 import Toolbar from "@material-ui/core/Toolbar";
 import Tooltip from "@material-ui/core/Tooltip";
-import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { useTranslation } from "react-i18next";
@@ -25,23 +25,21 @@ const SelectToolbar = ({
 
   return (
     <Toolbar sx={{ ml: 1, px: { xs: 3, sm: 6 } }}>
-      <IconButton edge="start" onClick={onCancel}>
-        <CloseIcon />
-      </IconButton>
-      <Typography
-        color="inherit"
-        sx={{ flexGrow: 1 }}
-        variant="h6"
-        component="div"
-      >
+      <Fab color="secondary" onClick={onCancel} variant="extended">
+        <CloseIcon sx={{ mr: 1 }} />
         {numSelected} {t("common.selected")}
-      </Typography>
+      </Fab>
+      <Box sx={{ flexGrow: 1 }} />
 
       {numSelected > 0 && (
         <Tooltip title={t("common.delete") as string}>
-          <IconButton disabled={processing} onClick={() => onDelete(selected)}>
+          <Fab
+            color="secondary"
+            disabled={processing}
+            onClick={() => onDelete(selected)}
+          >
             <DeleteIcon />
-          </IconButton>
+          </Fab>
         </Tooltip>
       )}
     </Toolbar>
