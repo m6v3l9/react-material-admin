@@ -189,13 +189,20 @@ export const createThemeComponents = (theme: Theme) => ({
     defaultProps: {
       disablePadding: true,
     },
+    styleOverrides: {
+      root: {
+        "& > a:not(:last-child)": {
+          marginBottom: theme.spacing(1),
+        },
+      }
+    }
   },
   MuiListItem: {
     styleOverrides: {
       root: {
         borderRadius: 16,
-        paddingTop: 12,
-        paddingBottom: 12,
+        paddingTop: 0,
+        paddingBottom: 0,
         "&.Mui-selected": {
           backgroundColor: theme.palette.background.default,
           color: theme.palette.text.primary,
@@ -242,6 +249,9 @@ export const createThemeComponents = (theme: Theme) => ({
     styleOverrides: {
       root: {
         backgroundImage: "none",
+        '& .MuiMenu-list': {
+          padding: 0,
+        },
       },
     },
   },
