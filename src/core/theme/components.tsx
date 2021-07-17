@@ -201,8 +201,8 @@ export const createThemeComponents = (theme: Theme) => ({
     styleOverrides: {
       root: {
         borderRadius: 16,
-        paddingTop: 12,
-        paddingBottom: 12,
+        paddingTop: 0,
+        paddingBottom: 0,
         "&.Mui-selected": {
           backgroundColor: theme.palette.background.default,
           color: theme.palette.text.primary,
