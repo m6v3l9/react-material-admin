@@ -189,6 +189,13 @@ export const createThemeComponents = (theme: Theme) => ({
     defaultProps: {
       disablePadding: true,
     },
+    styleOverrides: {
+      root: {
+        "& > a:not(:last-child)": {
+          marginBottom: theme.spacing(1),
+        },
+      }
+    }
   },
   MuiListItem: {
     styleOverrides: {
@@ -242,6 +249,9 @@ export const createThemeComponents = (theme: Theme) => ({
     styleOverrides: {
       root: {
         backgroundImage: "none",
+        '& .MuiMenu-list': {
+          padding: 0,
+        },
       },
     },
   },
